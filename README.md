@@ -1,6 +1,6 @@
 # nodejsapi
 
-A NodeJS back-end API connected to a MySQL database server.
+An API to handle patient database with NodeJS back-end connected to a MySQL database server.
 
 ## Initial setup
 - Initiate nodejs project: ```npm init```
