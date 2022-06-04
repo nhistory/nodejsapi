@@ -20,12 +20,6 @@ An API to handle patient database with NodeJS back-end connected to a MySQL data
 "type": "module"
 ```
 
-<<<<<<< HEAD
-
--   package.json
-    <img width="300" alt="image" src="https://user-images.githubusercontent.com/39740066/171910322-1039642e-8738-4d18-9ffe-5a9e4ba86aa8.png">
-
--   # Response test by using [Httpie](https://httpie.io/): `http :3000`
 -   package.json
     <img width="300" alt="image" src="https://user-images.githubusercontent.com/39740066/171910322-1039642e-8738-4d18-9ffe-5a9e4ba86aa8.png">
 
@@ -35,4 +29,3 @@ An API to handle patient database with NodeJS back-end connected to a MySQL data
 
 -   patients entity (init.sql)
     <img width="186" alt="image" src="https://user-images.githubusercontent.com/39740066/172004626-bb4de846-f9b7-472c-adc1-4ef058937bc9.png">
-    > > > > > > > a751bd20ee2d31a67ae401e89830552035a0ec4a
