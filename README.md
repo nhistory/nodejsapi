@@ -31,3 +31,9 @@ An API to handle patient database with NodeJS back-end connected to a MySQL data
 
 -   patients entity (init.sql)
 <img width="186" alt="image" src="https://user-images.githubusercontent.com/39740066/172004626-bb4de846-f9b7-472c-adc1-4ef058937bc9.png">
+
+## Implement API server
+- run server by dev mode : ```npm run start:dev```
+
+# References
+- https://www.youtube.com/playlist?list=PLopcHtZ0hJF1XfuyxnFmGmpmHrdyKO6Bx
