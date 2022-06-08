@@ -36,7 +36,7 @@ An API to handle patient database with NodeJS back-end connected to a MySQL data
 - run server by dev mode : ```npm run start:dev```
 
 ## Pino - Logging library
-Logging library can give unprecedented insights into how application is working. Having proper logging is equivalent to having poweful telescope in a space with all applications. [Pino](https://www.npmjs.com/package/pino) is a Node.js logging library that attributes asynchronous logging to its fast performance. With Pino, you can send the logs to many services by using proper transports like MySQL, Datadog, AWS cloud watch, or log flare.
+Logging library can give unprecedented insights into how application is working. Having proper logging is equivalent to having poweful telescope in a space with all applications. [Pino](https://www.npmjs.com/package/pino) is a Node.js logging library that attributes asynchronous logging to its fast performance. With Pino, you can send the logs to many services by using proper transports like MySQL, Datadog, AWS cloud watch, or log flare. [commit](https://github.com/nhistory/nodejsapi/commit/4a9d4d6678fa146d53172434646d17f12eb19716)
 
 
 # References
