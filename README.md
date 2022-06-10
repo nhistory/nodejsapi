@@ -1,6 +1,9 @@
 # nodejsapi
 
 An API to handle patient database with NodeJS back-end connected to a MySQL database server.
+- Track the API performance by using NodeJS logging library Pino.
+- Initiate database and handle by query commands to controll patientdb.
+
 
 ## Initial setup
 
