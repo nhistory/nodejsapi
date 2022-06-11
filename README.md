@@ -5,7 +5,8 @@
 5. [Implement API server](https://github.com/nhistory/nodejsapi/edit/master/README.md#implement-api-server)
 6. [Pino - Logging library](https://github.com/nhistory/nodejsapi/edit/master/README.md#pino---logging-library)
 7. [Controller structure](https://github.com/nhistory/nodejsapi/edit/master/README.md#controller-structure)
-8. [References](https://github.com/nhistory/nodejsapi/edit/master/README.md#references)
+8. [How to test this API](https://github.com/nhistory/nodejsapi/edit/master/README.md#how-to-test-this-api)
+9. [References](https://github.com/nhistory/nodejsapi/edit/master/README.md#references)
 
 ## What is nodejsapi?
 
@@ -34,16 +35,16 @@ You can start ```nodejsapi``` by following steps below.
 ```
 
 -   package.json
-<img width="300" alt="image" src="https://user-images.githubusercontent.com/39740066/171910322-1039642e-8738-4d18-9ffe-5a9e4ba86aa8.png">
+<img width="450" alt="image" src="https://user-images.githubusercontent.com/39740066/171910322-1039642e-8738-4d18-9ffe-5a9e4ba86aa8.png">
 
 -   Response test by using [Httpie](https://httpie.io/): `http :3000`
-<img width="476" alt="image" src="https://user-images.githubusercontent.com/39740066/172006602-27e01dd2-9f54-41f6-a8c2-7e516f3bf376.png">
+<img width="450" alt="image" src="https://user-images.githubusercontent.com/39740066/172006602-27e01dd2-9f54-41f6-a8c2-7e516f3bf376.png">
 
 
 ## Initiate database
 
 -   patients entity (init.sql)
-<img width="186" alt="image" src="https://user-images.githubusercontent.com/39740066/172004626-bb4de846-f9b7-472c-adc1-4ef058937bc9.png">
+<img width="200" alt="image" src="https://user-images.githubusercontent.com/39740066/172004626-bb4de846-f9b7-472c-adc1-4ef058937bc9.png">
 
 ## Implement API server
 There are different configurations in Nodejs, production and development environments. Node.js assumes that it's always running in a development environment. You can signal Node.js that you are running in production by setting the ```NODE_ENV=production environment``` variable.
@@ -62,11 +63,22 @@ There is a [article](https://www.dynatrace.com/news/blog/the-drastic-effects-of-
 Logging library can give unprecedented insights into how the application is working. Having proper logging is equivalent to having a powerful telescope in a space with all applications. [Pino](https://www.npmjs.com/package/pino) is a Node.js logging library that attributes asynchronous logging to its fast performance. With Pino, you can send the logs to many services using proper transports like MySQL, Datadog, AWS cloud watch, or log flare. In this project, Pino provides logging messages to determine what API is doing and if there are any errors. [commit](https://github.com/nhistory/nodejsapi/commit/4a9d4d6678fa146d53172434646d17f12eb19716)
 
 ## Controller structure
-![image](https://user-images.githubusercontent.com/39740066/173164589-1eb438f1-1803-441f-a573-c6708a3d7988.png)
+<img width="450" alt="image" src="https://user-images.githubusercontent.com/39740066/173194875-c2465ae6-567f-4c9e-bed8-40e3eeb243de.png">
+
 
 When you make a request (means request a data) to MVC application, a controller is responsible for returning the response to that request. The controller can perform one or more actions. The controller action can return different types of action results to a particular request. In this application, there are 5 actions at ```patient.controller.js```.
 
-<img width="616" alt="image" src="https://user-images.githubusercontent.com/39740066/173167326-5b071043-f6c9-4b8c-b8ed-5b9d7136fbb9.png">
+<img width="450" alt="image" src="https://user-images.githubusercontent.com/39740066/173167326-5b071043-f6c9-4b8c-b8ed-5b9d7136fbb9.png">
+
+## How to test this API
+After you pull this application, you can execute API with ```npm run start:dev```(development mode) command inside of working directory ```nodejsapi```. If there is no error and conflicts, you can see the message like this.
+
+<img width="450" alt="image" src="https://user-images.githubusercontent.com/39740066/173194775-69a2ecfb-7dfd-4d27-b44b-bc3c070306da.png">
+
+If you want to test by using httpie, ```http :3000``` or ```http :3000/patients``` command will help for checking there are any issues with PORT 3000.
+
+<img width="450" alt="image" src="https://user-images.githubusercontent.com/39740066/173195029-1c9d891f-e52e-4cc0-8050-5abca85fa080.png">
+<img width="450" alt="image" src="https://user-images.githubusercontent.com/39740066/173196859-7498817e-19a1-4e81-aa2c-60d829fc863a.png">
 
 
 ## References
