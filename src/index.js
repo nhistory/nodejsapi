@@ -5,7 +5,7 @@ import cors from 'cors';
 import Response from './domain/response.js';
 import logger from './util/logger.js';
 import httpStatus from './controller/patient.controller.js';
-import patientRoutes from './route/patient.route';
+import patientRoutes from './route/patient.route.js';
 
 dotenv.config();
 const PORT = process.env.SERVER_PORT || 3000;
