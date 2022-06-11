@@ -6,7 +6,8 @@
 6. [Pino - Logging library](https://github.com/nhistory/nodejsapi/edit/master/README.md#pino---logging-library)
 7. [Controller structure](https://github.com/nhistory/nodejsapi/edit/master/README.md#controller-structure)
 8. [How to test this API](https://github.com/nhistory/nodejsapi/edit/master/README.md#how-to-test-this-api)
-9. [References](https://github.com/nhistory/nodejsapi/edit/master/README.md#references)
+9. [Containerization with docker](https://github.com/nhistory/nodejsapi/edit/master/README.md#containerization-with-docker)
+10. [References](https://github.com/nhistory/nodejsapi/edit/master/README.md#references)
 
 ## What is nodejsapi?
 
@@ -14,6 +15,8 @@ An API to handle patient database with NodeJS back-end connected to a MySQL data
 - Track the API performance by using NodeJS logging library Pino.
 - Initiate database and handle by query commands to controll patientdb.
 - Fetch and retrieve patient data by using MVC controller.
+- Test API request and reponse by using httpie.
+- Build docker container by using docker-compose.yml setup.
 
 
 ## Initial setup
@@ -80,6 +83,22 @@ If you want to test by using httpie, ```http :3000``` or ```http :3000/patients`
 <img width="450" alt="image" src="https://user-images.githubusercontent.com/39740066/173195029-1c9d891f-e52e-4cc0-8050-5abca85fa080.png">
 <img width="450" alt="image" src="https://user-images.githubusercontent.com/39740066/173196859-7498817e-19a1-4e81-aa2c-60d829fc863a.png">
 
+## Containerization with docker
+
+Docker is an open-source containerization platform. It enables developers to package applications into containers. We can handle the initial setting of docker container with docker-compose. In this application, we will build a docker image for using MySQL without install in the host computer directly. Before starting the docker-compose file, you need to check if any docker image is currently running with ```docker ps -a``` and ```docker images```. We can also check the docker-compose file using the command ```docker-compose config```.
+```docker-compose up -d``` command start downloading MySQL 8 version docker image and run. You can see detailed information with docker ps.
+
+- If you already installed and are running MySQL on the host, there would be an error regard to PORT.(address already in use)
+- Get into the MySQL cli mode : ```mysql -h localhost -P 3306 --protocol=tcp -uroot -pletmein```
+
+You can find ```patientsdb``` after using ```SHOW DATABASES``` command.
+
+<img width="207" alt="image" src="https://user-images.githubusercontent.com/39740066/173204659-75bf9890-4e42-44ad-a6b9-91024abe7056.png">
+
+And we can check patients entity information by using ```DESC patients```
+
+<img width="450" alt="image" src="https://user-images.githubusercontent.com/39740066/173204721-275e31d9-51b7-4150-8a5f-750b878c519c.png">
+
 
 ## References
 - https://www.youtube.com/playlist?list=PLopcHtZ0hJF1XfuyxnFmGmpmHrdyKO6Bx
@@ -87,3 +106,4 @@ If you want to test by using httpie, ```http :3000``` or ```http :3000/patients`
 - https://nodejs.dev/learn/nodejs-the-difference-between-development-and-production
 - https://www.dynatrace.com/news/blog/the-drastic-effects-of-omitting-node-env-in-your-express-js-applications/
 - https://www.tutorialspoint.com/mvc_framework/mvc_framework_controllers.htm
+- https://www.ibm.com/in-en/cloud/learn/docker
